@@ -31,11 +31,19 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
+                        <div class="row mb-3">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
+                            </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                @if (Route::has('register'))
+                                        New here? <a href="{{ route('register') }}">{{ __('Register') }} here!</a>
+                                @endif
                             </div>
                         </div>
                     </form>

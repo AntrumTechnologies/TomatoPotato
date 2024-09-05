@@ -37,9 +37,7 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request) {
-        $user = Auth::user();
-        $user->tokens()->delete(); // Deletes all tokens
-
+        Auth::logout();
         return redirect('/');
     }
 
